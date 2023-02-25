@@ -14,8 +14,6 @@ export TARGET_CFLAGS = -std=c99 -g
 export TARGET_CC = $(TARGET)-gcc
 export TARGET_CXX = $(TARGET)-g++
 export TARGET_LD = $(TARGET)-gcc
-export TARGET_LDFLAGS =
-export TARGET_LIBS =
 
 export BUILD_DIR = $(abspath build)
 

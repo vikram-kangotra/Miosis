@@ -2,8 +2,8 @@ include build_scripts/config.mk
 
 LDFLAGS += -n -T src/linker.ld -nostdlib
 
-BOOT_OBJ = $(BUILD_DIR)/boot.o
-KERNEL_OBJ = $(BUILD_DIR)/kernel.o
+BOOT_OBJ = $(BUILD_DIR)/boot/boot.o
+KERNEL_OBJ = $(wildcard $(BUILD_DIR)/kernel/*.o $(BUILD_DIR)/kernel/*/*.o)
 
 ELF_FILE = $(BUILD_DIR)/miosis.elf
 ISO_FILE = $(BUILD_DIR)/miosis.iso
