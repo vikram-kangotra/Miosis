@@ -8,7 +8,7 @@ BOOT_OBJ = $(BUILD_DIR)/boot.o
 
 all: $(BOOT_OBJ)
 
-$(BOOT_OBJ): boot.asm always
+$(BOOT_OBJ): boot.asm | always
 	$(TARGET_ASM) $(ASMFLAGS) -o $@ $<
 
 always:
